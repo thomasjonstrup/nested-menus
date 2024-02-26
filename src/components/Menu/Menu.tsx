@@ -48,28 +48,6 @@ interface MenuItemProps<T> {
 	menuRef: MutableRefObject<HTMLUListElement>
 }
 
-/* const MenuPopup2 = <T extends object>(
-	props: {
-		autoFocus: FocusStrategy;
-		onClose: () => void;
-		children: ReactNode;
-	} & SapphireMenuProps<T>
-) => {
-	const state = useTreeState({ ...props, selectionMode: "single" });
-	const menuRef = useRef<HTMLUListElement>(null);
-	const { menuProps } = useMenu({
-		...props
-	}, state, menuRef);
-
-	const { children } = props;
-
-	return (
-		<ul {...menuProps} ref={menuRef} className={styles["sapphire-menu"]}>
-			{children}
-		</ul>
-	);
-}; */
-
 export function MenuItem<T>({
 	item,
 	state,
