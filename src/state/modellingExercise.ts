@@ -48,30 +48,22 @@ export type User = {
 	email: string
 }
 
+export type Account = {
+	information: {
+		name: string
+		IBAN: string,
+		localCurreny: Currency,
+		pocketCurrency?: Currency
+	},
+	type: AccountType
+}
+
 export type APP_STATE = {
 	page: Page,
 	activePage: ActivePage,
 	user: User
 	accountPage: {
-		accounts: [
-			{
-				information: {
-					name: string
-					IBAN: string,
-					localCurreny: Currency
-				},
-				type: AccountType
-			},
-			{
-				information: {
-					name: string
-					IBAN: string,
-					localCurreny: Currency,
-					pocketCurrency?: Currency
-				},
-				type: AccountType
-			},
-		]
+		accounts: Account[]
 		pageState: PageFetchState,
 		pageErrors: ErrorState[]
 	},
